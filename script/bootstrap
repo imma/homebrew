@@ -6,8 +6,10 @@ function bootstrap {
 
   case "$(uname -s)" in
     Darwin)
-      /usr/bin/ruby "$shome/script/brew_install"
-      brew update
+      if [[ ! -d "$HOME/homebrew/.git" ]]; then
+        git clone git@github.com:Homebrew/brew "$HOME/homebrew"
+      fi
+      brew cask
       ;;
   esac
 }

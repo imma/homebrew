@@ -2,9 +2,7 @@
 
 function _homebrew_profile {
   local shome="${_homebrew_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
-  PATH="$shome/bin:$shome/install/sbin:$shome/install/bin:$PATH"
-
-  export HOMEBREW_PREFIX="$HOME/homebrew"
+  PATH="$HOME/homebrew/sbin:$HOME/homebrew/bin:$PATH"
 }
 
 _homebrew_profile
