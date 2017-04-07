@@ -6,7 +6,7 @@ function bootstrap {
 
   case "$(uname -s)" in
     Darwin)
-      /usr/bin/ruby "$shome/script/brew_install" "$shome/install"
+      /usr/bin/ruby "$shome/script/brew_install"
       brew update
       ;;
   esac
