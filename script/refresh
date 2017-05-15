@@ -4,7 +4,7 @@ function main {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  brew anayltics off
+  brew analytics off
   brew update
   brew outdated
 }
