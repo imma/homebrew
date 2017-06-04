@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function _homebrew_profile {
-  local shome="${_homebrew_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
+  local shome="${_homebrew_home:="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
   PATH="${BOARD_PATH:-$HOME}/homebrew/sbin:${BOARD_PATH:-$HOME}/homebrew/bin:$PATH"
 
   export HOMEBREW_NO_ANALYTICS=1
