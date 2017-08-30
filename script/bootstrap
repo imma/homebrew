@@ -9,7 +9,6 @@ function bootstrap {
       if [[ ! -d "$HOME/homebrew/.git" ]]; then
         git clone git@github.com:Homebrew/brew "$HOME/homebrew"
       fi
-      brew cask
       ;;
   esac
 }
