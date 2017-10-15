@@ -4,7 +4,7 @@ function bootstrap {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  case "$(uname -s)" in
+  case "${DISTRIB_ID}" in
     Darwin)
       if [[ ! -d "$HOME/homebrew/.git" ]]; then
         git clone git@github.com:Homebrew/brew "$HOME/homebrew"
